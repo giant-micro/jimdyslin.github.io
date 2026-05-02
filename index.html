@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Jim's Landscaping & Junk Removal | Blue Earth, MN</title>
-  <meta name="description" content="Jim's Landscaping & Junk Removal provides straightforward landscaping, cleanup, hauling, and junk removal services in the Blue Earth, Minnesota area.">
+  <meta name="description" content="Call Jim's Landscaping & Junk Removal for straightforward landscaping, cleanup, hauling, and junk removal services around Blue Earth, Minnesota.">
   <style>
     :root {
       --green: #004b12;
@@ -16,195 +16,235 @@
 
     * { box-sizing: border-box; }
 
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
+      min-height: 100svh;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--ink);
-      background: var(--offwhite);
+      background:
+        radial-gradient(circle at top right, rgba(0, 75, 18, .12), transparent 30%),
+        var(--offwhite);
     }
 
-    .wrap {
-      width: min(1040px, calc(100% - 32px));
-      margin: 0 auto;
-    }
+    a { color: inherit; }
 
-    header {
-      background: var(--white);
-      border-bottom: 14px solid var(--green);
-      padding: 28px 0 22px;
-    }
-
-    .brand {
-      display: grid;
-      gap: 14px;
-      align-items: center;
-    }
-
-    .jim {
-      margin: 0;
-      color: var(--green);
-      font-size: clamp(4rem, 15vw, 9rem);
-      line-height: .82;
-      letter-spacing: -0.08em;
-      font-weight: 900;
-    }
-
-    .jim span {
-      letter-spacing: -0.04em;
-    }
-
-    .services-bar {
-      display: inline-block;
-      background: var(--green);
-      color: var(--white);
-      padding: 12px 18px 14px;
-      font-family: Georgia, 'Times New Roman', serif;
-      font-weight: 900;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      font-size: clamp(1.35rem, 4vw, 3.25rem);
-      line-height: 1.08;
-      width: fit-content;
-      box-shadow: 8px 8px 0 rgba(0, 75, 18, .12);
+    .page {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
     }
 
     main {
-      padding: clamp(34px, 6vw, 72px) 0;
-    }
-
-    .hero {
+      width: min(560px, 100%);
+      margin: 0 auto;
+      padding: max(18px, env(safe-area-inset-top)) 16px max(18px, env(safe-area-inset-bottom));
+      flex: 1;
       display: grid;
-      grid-template-columns: 1.3fr .7fr;
-      gap: clamp(24px, 5vw, 56px);
-      align-items: center;
-    }
-
-    h2 {
-      margin: 0;
-      color: var(--green-dark);
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: clamp(2.25rem, 6vw, 5rem);
-      line-height: .98;
-      text-transform: uppercase;
-    }
-
-    .script {
-      display: block;
-      margin-bottom: 8px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-style: italic;
-      text-transform: none;
-      letter-spacing: -0.04em;
-      font-size: clamp(1.8rem, 5vw, 4rem);
-    }
-
-    .lead {
-      margin: 24px 0 0;
-      font-size: clamp(1.1rem, 2vw, 1.35rem);
-      max-width: 58ch;
-      line-height: 1.55;
-    }
-
-    .cards {
-      display: grid;
-      gap: 12px;
-      margin-top: 28px;
-      max-width: 540px;
+      align-content: center;
+      gap: 16px;
     }
 
     .card {
       background: var(--white);
-      border-left: 12px solid var(--green);
-      padding: 16px 18px;
-      font-size: 1.22rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      box-shadow: 0 10px 24px rgba(16, 37, 22, .08);
+      border: 6px solid var(--green);
+      box-shadow: 10px 10px 0 rgba(0, 75, 18, .14);
+      padding: clamp(18px, 5vw, 30px);
     }
 
-    .callbox {
+    .brand {
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--green);
+      font-size: clamp(4.6rem, 24vw, 8rem);
+      line-height: .78;
+      letter-spacing: -0.085em;
+      font-weight: 900;
+    }
+
+    h1 span { letter-spacing: -0.04em; }
+
+    .services-bar {
+      margin-top: 12px;
+      display: block;
       background: var(--green);
       color: var(--white);
-      padding: clamp(22px, 4vw, 34px);
-      border-radius: 2px;
-      text-align: center;
-      box-shadow: 12px 12px 0 rgba(0, 75, 18, .16);
-    }
-
-    .callbox p {
-      margin: 0 0 10px;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
+      padding: 10px 12px 12px;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 900;
+      letter-spacing: .055em;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: clamp(1.38rem, 7.4vw, 2.4rem);
+      line-height: 1.05;
     }
 
-    .phone {
+    .tagline {
+      margin: 16px 0 0;
+      color: var(--green-dark);
+      font-family: Georgia, 'Times New Roman', serif;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: clamp(1.1rem, 5vw, 1.55rem);
+      line-height: 1.12;
+    }
+
+    .plain {
+      margin: 12px auto 0;
+      max-width: 36ch;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.45;
+    }
+
+    .actions {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .call-button {
       display: block;
+      width: 100%;
+      min-height: 72px;
+      padding: 14px 16px;
+      border: 0;
+      border-radius: 0;
+      background: var(--green);
       color: var(--white);
       text-decoration: none;
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      line-height: 1.05;
-      font-weight: 900;
-      letter-spacing: .03em;
-    }
-
-    .label {
-      display: block;
-      margin-bottom: 18px;
-      font-size: .95rem;
-      opacity: .86;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    footer {
-      background: var(--white);
-      border-top: 1px solid rgba(0, 75, 18, .18);
-      padding: 24px 0;
-      color: var(--green-dark);
-      font-weight: 900;
       text-align: center;
+      font-weight: 900;
+      box-shadow: 6px 6px 0 rgba(0, 75, 18, .18);
     }
 
-    @media (max-width: 780px) {
-      .hero { grid-template-columns: 1fr; }
-      .callbox { text-align: left; }
+    .call-button:focus-visible {
+      outline: 4px solid #95c99d;
+      outline-offset: 3px;
+    }
+
+    .call-button .small {
+      display: block;
+      margin-bottom: 2px;
+      font-size: .86rem;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      opacity: .92;
+    }
+
+    .call-button .number {
+      display: block;
+      font-size: clamp(2rem, 9vw, 3rem);
+      line-height: 1;
+      letter-spacing: .02em;
+    }
+
+    .call-button.secondary {
+      background: var(--white);
+      color: var(--green);
+      border: 4px solid var(--green);
+      box-shadow: none;
+    }
+
+    .services {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .services li {
+      background: rgba(0, 75, 18, .08);
+      border-left: 8px solid var(--green);
+      padding: 10px 12px;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: .025em;
+    }
+
+    .address {
+      margin: 14px 0 0;
+      color: var(--green-dark);
+      text-align: center;
+      font-size: .98rem;
+      font-weight: 900;
+    }
+
+    .sticky-call {
+      position: sticky;
+      bottom: 0;
+      z-index: 2;
+      padding: 10px 16px max(10px, env(safe-area-inset-bottom));
+      background: rgba(247, 247, 241, .94);
+      border-top: 1px solid rgba(0, 75, 18, .18);
+      backdrop-filter: blur(8px);
+    }
+
+    .sticky-call a {
+      width: min(560px, 100%);
+      margin: 0 auto;
+      display: block;
+      background: var(--green);
+      color: var(--white);
+      text-align: center;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1.35rem;
+      padding: 15px 16px;
+      box-shadow: 5px 5px 0 rgba(0, 75, 18, .18);
+    }
+
+    @media (min-width: 720px) {
+      main { padding-top: 42px; padding-bottom: 42px; }
+      .actions { grid-template-columns: 1fr 1fr; }
+      .call-button:first-child { grid-column: 1 / -1; }
+      .sticky-call { display: none; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap brand">
-      <h1 class="jim">Jim<span>'s</span></h1>
-      <div class="services-bar">Landscaping<br>Junk Removal</div>
-    </div>
-  </header>
-
-  <main>
-    <div class="wrap hero">
-      <section>
-        <h2><span class="script">For all your</span>Landscaping<br>and<br>Junk Removal<br><span class="script">needs</span></h2>
-        <p class="lead">Straightforward local help for outdoor work, cleanup, hauling, and property projects around Blue Earth and the surrounding area.</p>
-        <div class="cards" aria-label="Services">
-          <div class="card">Landscaping</div>
-          <div class="card">Junk removal</div>
-          <div class="card">Cleanup and hauling</div>
+  <div class="page">
+    <main>
+      <section class="card" aria-label="Jim's Landscaping and Junk Removal business card">
+        <div class="brand">
+          <h1>Jim<span>'s</span></h1>
+          <div class="services-bar">Landscaping<br>Junk Removal</div>
         </div>
+
+        <p class="tagline">For all your landscaping and junk removal needs</p>
+        <p class="plain">Straightforward local help for outdoor work, cleanup, hauling, and property projects around Blue Earth.</p>
+
+        <div class="actions" aria-label="Call Jim">
+          <a class="call-button" href="tel:+15075253357" aria-label="Call Jim's cell phone at 507-525-3357">
+            <span class="small">Tap to call cell</span>
+            <span class="number">507-525-3357</span>
+          </a>
+          <a class="call-button secondary" href="tel:+15075263128" aria-label="Call Jim's office phone at 507-526-3128">
+            <span class="small">Office</span>
+            <span class="number">507-526-3128</span>
+          </a>
+        </div>
+
+        <ul class="services" aria-label="Services offered">
+          <li>Landscaping</li>
+          <li>Junk removal</li>
+          <li>Cleanup & hauling</li>
+        </ul>
+
+        <p class="address">P.O. Box 241 · Blue Earth, MN 56013</p>
       </section>
+    </main>
 
-      <aside class="callbox" aria-label="Contact Jim's Landscaping and Junk Removal">
-        <p>Call today</p>
-        <a class="phone" href="tel:+15075253357">507-525-3357</a>
-        <span class="label">Cell</span>
-        <a class="phone" href="tel:+15075263128">507-526-3128</a>
-        <span class="label">Office</span>
-      </aside>
+    <div class="sticky-call" aria-hidden="false">
+      <a href="tel:+15075253357">Call Jim: 507-525-3357</a>
     </div>
-  </main>
-
-  <footer>
-    P.O. Box 241 · Blue Earth, MN 56013
-  </footer>
+  </div>
 </body>
 </html>
