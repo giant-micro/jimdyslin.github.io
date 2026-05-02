@@ -115,33 +115,8 @@
       font-weight: 900;
     }
 
-    .sticky-call {
-      position: sticky;
-      bottom: 0;
-      z-index: 2;
-      padding: 10px 16px max(10px, env(safe-area-inset-bottom));
-      background: rgba(247, 247, 241, .94);
-      border-top: 1px solid rgba(0, 75, 18, .18);
-      backdrop-filter: blur(8px);
-    }
-
-    .sticky-call a {
-      width: min(560px, 100%);
-      margin: 0 auto;
-      display: block;
-      background: var(--green);
-      color: var(--white);
-      text-align: center;
-      text-decoration: none;
-      font-weight: 900;
-      font-size: 1.35rem;
-      padding: 15px 16px;
-      box-shadow: 5px 5px 0 rgba(0, 75, 18, .18);
-    }
-
     @media (min-width: 720px) {
       main { padding-top: 42px; padding-bottom: 42px; }
-      .sticky-call { display: none; }
     }
   </style>
 </head>
@@ -168,10 +143,6 @@
         <p class="address">P.O. Box 241 · Blue Earth, MN 56013</p>
       </section>
     </main>
-
-    <div class="sticky-call" aria-hidden="false">
-      <a href="tel:+15075253357">Call Jim: 507-525-3357</a>
-    </div>
   </div>
 </body>
 </html>
